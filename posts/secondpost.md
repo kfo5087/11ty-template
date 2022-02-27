@@ -1,18 +1,22 @@
----
-title: This is my second post.
-description: This is a post on My Blog about leveraging agile frameworks.
-date: 2018-07-04
-tags:
-  - number 2
-layout: layouts/post.njk
----
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+## What is an API?
+An API (Application Programming Interface) is a software that allows for connections between computers and computer programs. For this project we took advantage of Wikipedia's API's.
 
-## Section Header
+## Fetch
 
-<a href="{{ '/posts/firstpost/' | url }}">First post</a>
-<a href="{{ '/posts/thirdpost/' | url }}">Third post</a>
+`fetch` is a method in JavaScript that is used to request resources in the form of HTTP from a webpage. Shown below is an example of `fetch` being used to communicate with Wikipedia. A request is sent out with a resulting JSON response.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t72e2a77b8gu6t7r528m.png)
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+## Wikipedia API
+Before starting with Wikipedia api, make sure to import the necessary packages by adding this line of code to the top
+`import '@lrnwebcomponents/wikipedia-query/wikipedia-query.js';`
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+Wikipedia has a numerous amount of functions that can be referenced [here](https://en.wikipedia.org/w/api.php). This API allows users to connect to Wikipedia and manage different functions. With this lab we are dealing with the query function and it is accessed by using the tag `wikipedia-query`, it uses `fetch` to search for the necessary parameters. 
+
+```
+<wikipedia-query search="${this.city}, ${this.state}"></wikipedia-query>
+      <wikipedia-query search="${this.city}"></wikipedia-query>
+      <wikipedia-query search="${this.state}"></wikipedia-query>
+```
+The above block of code is three query's that get parameters filling out the state and city, the city alone, and the state alone. They were gained earlier in conjunction with the freegeoip app.
+
+In all, API's are a useful tool that allow for coders to do less coding. Provided is my GitHub [repository](https://github.com/kfo5087/ip-project/tree/master/src)
