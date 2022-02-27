@@ -7,4 +7,4 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+My name is Kayra, I am not a web developer but damn am I trying 
